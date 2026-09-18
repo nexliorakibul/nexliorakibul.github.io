@@ -894,6 +894,36 @@ main {
   transform: translateY(-3px);
 }
 
+.js-enabled .back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.js-enabled .back-to-top.is-visible {
+  opacity: 0.78;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.js-enabled .back-to-top.is-visible:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.js-enabled .reveal-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+}
+
+.js-enabled .reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 [hidden] {
   display: none !important;
 }
