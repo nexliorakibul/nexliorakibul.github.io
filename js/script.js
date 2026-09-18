@@ -42,7 +42,11 @@ function toggleMobileMenu() {
 menuButton?.addEventListener("click", toggleMobileMenu);
 
 navigationLinks.forEach((link) => {
-  link.addEventListener("click", closeMobileMenu);
+  link.addEventListener("click", () => {
+    const targetId = link.getAttribute("href")?.replace(/^#/, "");
+    if (targetId) setActiveNavigation(targetId);
+    closeMobileMenu();
+  });
 });
 
 document.addEventListener("keydown", (event) => {
