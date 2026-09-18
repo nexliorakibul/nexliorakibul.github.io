@@ -167,11 +167,16 @@ strong {
   padding-block: clamp(64px, 10vh, 104px) 48px;
 }
 
+.profile-mark {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 38px;
+}
+
 .logo {
   display: inline-grid;
   width: 48px;
   height: 48px;
-  margin-bottom: 38px;
   border: 1px solid var(--color-accent-border);
   border-radius: 50%;
   color: var(--color-accent);
@@ -183,6 +188,18 @@ strong {
     border-color var(--transition),
     background-color var(--transition),
     transform var(--transition);
+}
+
+.profile-status {
+  position: absolute;
+  right: 1px;
+  bottom: 2px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--color-bg-deep);
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 12px rgba(94, 234, 212, 0.55);
 }
 
 .logo:hover {
@@ -522,8 +539,8 @@ main {
 .project-card {
   position: relative;
   display: grid;
-  grid-template-columns: 54px minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: minmax(160px, 0.38fr) minmax(0, 1fr);
+  gap: 24px;
   overflow: hidden;
   padding: 28px;
   border: 1px solid var(--color-border);
@@ -559,11 +576,74 @@ main {
   transform: scale(1.35);
 }
 
-.project-number {
+.project-visual {
+  position: relative;
+  display: flex;
+  min-height: 178px;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.13);
+  border-radius: calc(var(--radius-large) - 6px);
+  background: #101c30;
+  isolation: isolate;
+}
+
+.project-visual::before,
+.project-visual::after {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  content: "";
+  filter: blur(2px);
+}
+
+.project-visual::before {
+  top: -32px;
+  right: -24px;
+  width: 125px;
+  height: 125px;
+  border: 1px solid rgba(94, 234, 212, 0.34);
+  box-shadow: 0 0 52px rgba(94, 234, 212, 0.14);
+}
+
+.project-visual::after {
+  top: 37px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  background: rgba(94, 234, 212, 0.15);
+}
+
+.visual-health { background: linear-gradient(145deg, #10233a, #111b2e 68%); }
+.visual-vision { background: linear-gradient(145deg, #211b3d, #111b2e 68%); }
+.visual-wellness { background: linear-gradient(145deg, #15342e, #111b2e 68%); }
+.visual-robotics { background: linear-gradient(145deg, #332519, #111b2e 68%); }
+
+.visual-index {
+  position: absolute;
+  top: 16px;
+  left: 18px;
   color: var(--color-accent);
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 760;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+}
+
+.visual-title {
+  color: var(--color-heading);
+  font-size: 1rem;
+  font-weight: 760;
+  letter-spacing: -0.02em;
+}
+
+.visual-metric {
+  margin-top: 5px;
+  color: var(--color-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.63rem;
+  letter-spacing: 0.02em;
 }
 
 .project-body {
@@ -1106,8 +1186,8 @@ main {
     padding: 23px;
   }
 
-  .project-number {
-    font-size: 0.7rem;
+  .project-visual {
+    min-height: 148px;
   }
 
   .compact-project-card {

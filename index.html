@@ -12,8 +12,8 @@
 
   <title>Rakibul Hasan | AI/ML Researcher &amp; Web Developer</title>
 
-  <link rel="stylesheet" href="css/style.css?v=1.0.0">
-  <script src="js/script.js?v=1.0.0" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=1.1.0">
+  <script src="js/script.js?v=1.1.0" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,10 @@
   <div class="site-shell">
     <header class="site-header" id="top">
       <div class="intro-block">
-        <a class="logo" href="#top" aria-label="Rakibul Hasan home">RH</a>
+        <div class="profile-mark" aria-label="Rakibul Hasan monogram">
+          <a class="logo" href="#top" aria-label="Rakibul Hasan home">RH</a>
+          <span class="profile-status" aria-hidden="true"></span>
+        </div>
 
         <h1>Rakibul Hasan</h1>
         <p class="professional-title">
@@ -195,7 +198,11 @@
 
           <div class="project-list" aria-live="polite">
             <article class="project-card featured" data-category="research ai">
-              <div class="project-number" aria-hidden="true">01</div>
+              <div class="project-visual visual-health" aria-hidden="true">
+                <span class="visual-index">01</span>
+                <span class="visual-title">Healthcare AI</span>
+                <span class="visual-metric">CBC → ML → XAI</span>
+              </div>
               <div class="project-body">
                 <p class="project-status">Ongoing · Manuscript in preparation</p>
                 <h3>Leakage-Controlled Leukemia Screening Using CBC Data</h3>
@@ -215,7 +222,11 @@
             </article>
 
             <article class="project-card featured" data-category="research ai">
-              <div class="project-number" aria-hidden="true">02</div>
+              <div class="project-visual visual-vision" aria-hidden="true">
+                <span class="visual-index">02</span>
+                <span class="visual-title">Vision AI</span>
+                <span class="visual-metric">CNN + Transformer</span>
+              </div>
               <div class="project-body">
                 <p class="project-status">Ongoing · Research and manuscript preparation</p>
                 <h3>HybridVisionNetV2: Multiclass Ocular Disease Classification</h3>
@@ -237,7 +248,11 @@
             </article>
 
             <article class="project-card featured" data-category="web">
-              <div class="project-number" aria-hidden="true">03</div>
+              <div class="project-visual visual-wellness" aria-hidden="true">
+                <span class="visual-index">03</span>
+                <span class="visual-title">MindMate</span>
+                <span class="visual-metric">Mood • Journal • Support</span>
+              </div>
               <div class="project-body">
                 <p class="project-status">Completed · Academic prototype</p>
                 <h3>MindMate AI — Mental Wellness Companion</h3>
@@ -266,21 +281,25 @@
             </article>
 
             <article class="project-card featured" data-category="embedded">
-              <div class="project-number" aria-hidden="true">04</div>
+              <div class="project-visual visual-robotics" aria-hidden="true">
+                <span class="visual-index">04</span>
+                <span class="visual-title">Robotics</span>
+                <span class="visual-metric">Sense → PID → Drive</span>
+              </div>
               <div class="project-body">
                 <p class="project-status">Ongoing · Team project</p>
                 <h3>Competition Fast Line Follower Robot</h3>
                 <p>
-                  An autonomous robot designed for fast and stable competition-track
-                  navigation using sensor calibration, real-time steering correction,
-                  and PID-based motor control.
+                  An ESP32-powered autonomous robot designed for fast and stable
+                  competition-track navigation using QTR-8RC sensor calibration,
+                  real-time steering correction, and PID-based motor control.
                 </p>
                 <ul class="tag-list">
-                  <li>Embedded C/C++</li>
-                  <li>Arduino</li>
-                  <li>IR Sensors</li>
+                  <li>ESP32</li>
+                  <li>QTR-8RC</li>
+                  <li>TB6612FNG</li>
+                  <li>N20 Motors</li>
                   <li>PID Control</li>
-                  <li>Robotics</li>
                 </ul>
               </div>
             </article>
